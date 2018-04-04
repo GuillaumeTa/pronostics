@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>GS Prono</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -13,8 +13,9 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/72/13/9257b90dd201ba6.jpg");
+                /*background-color: #fff;*/
+                color: #ffffff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -45,12 +46,12 @@
                 text-align: center;
             }
 
-            .title {
+            /*.title {
                 font-size: 84px;
-            }
+            }*/
 
             .links > a {
-                color: #636b6f;
+                color: #ffffff;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -59,10 +60,14 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            .accueil {
+                margin-bottom: 125px;
+                margin-top: 125px;
             }
         </style>
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -78,16 +83,14 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="accueil col-sm-12">
+                    <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/pronostics" role="button">Pronostics</a>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="accueil col-sm-12">
+                    <a class="btn btn-secondary btn-lg" href="#" role="button">Résultats</a>
+                </div>
+                <div class="accueil col-sm-12">
+                    <a class="btn btn-secondary btn-lg" href="#" role="button">Classements</a>
                 </div>
             </div>
         </div>
