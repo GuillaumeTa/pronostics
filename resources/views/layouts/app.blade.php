@@ -38,14 +38,11 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{ route('pronostics') }}">Pronostics</a></li>
+                        <li><a href="{{ route('resultat') }}">Résultats</a></li>
+                        <li><a href="{{ route('classement') }}">Classement</a></li>
                     </ul>
-                    
-                    <ul>
-                    	<li><a href="{{ route('login') }}">Pronostics</a></li>
-                        <li><a href="{{ route('register') }}">Résultats</a></li>
-                        <li><a href="{{ route('register') }}">Classement</a></li>
-					</ul>
+					
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->

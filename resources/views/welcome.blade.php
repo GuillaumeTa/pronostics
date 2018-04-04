@@ -87,10 +87,10 @@
                     <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/pronostics" role="button">Pronostics</a>
                 </div>
                 <div class="accueil col-sm-12">
-                    <a class="btn btn-secondary btn-lg" href="#" role="button">Résultats</a>
+                    <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/resultat" role="button">Résultats</a>
                 </div>
                 <div class="accueil col-sm-12">
-                    <a class="btn btn-secondary btn-lg" href="#" role="button">Classements</a>
+                    <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/classement" role="button">Classements</a>
                 </div>
             </div>
         </div>
