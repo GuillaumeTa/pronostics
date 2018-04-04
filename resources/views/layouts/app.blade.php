@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -26,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
+                    
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
@@ -38,7 +40,12 @@
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
-
+                    
+                    <ul>
+                    	<li><a href="{{ route('login') }}">Pronostics</a></li>
+                        <li><a href="{{ route('register') }}">Résultats</a></li>
+                        <li><a href="{{ route('register') }}">Classement</a></li>
+					</ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
