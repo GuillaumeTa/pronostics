@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.match{
+	border: 1px solid black;
+	align-item: center;
+	
+}
+p{
+	text-align: center;
+}
+.equipes{
+	margin-left: 15.8%;
+	margin-top: 1%;
+}
+.equipe1{
+	border: 1px solid black;
+}
+.versus{
+	margin-right: 78%;
+	margin-top: 1%;
+}
+.equipe2{
+	border: 1px solid black;
+	margin-left: 5%;
+	margin-top: -4.3%;
+}
+.scorePrev{
+	border: 1px solid black;
+	margin-left: 8.4%;
+	margin-top: -5.1%;
+}
+.equipeVotes{
+	margin-left: 5.5%;
+}
+.scores{
+	margin-right: -25%;
+}
+
+.score1{
+	margin-left: 35%;
+
+}
+.score2{
+	margin-top: -2.9%;
+	margin-left: 50%;
+
+}
+.match{
+	margin-top: 5%;
+}
+
+.buton{
+	margin-top: 3.8%;
+	margin-left: -22%
+}
+
+
+
