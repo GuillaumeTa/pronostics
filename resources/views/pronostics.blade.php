@@ -46,7 +46,7 @@
 						id="inlineFormInputName2" placeholder="score-2">
 						<button type="button" class="buton btn btn-secondary btn-sm">valider</button>
 				</div>
-				
+
 			</div>
 
 
@@ -98,7 +98,7 @@
 						<button type="button" class="buton btn btn-secondary btn-sm">valider</button>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 	<!-- MATCH 3 -->
@@ -144,9 +144,9 @@
 						id="inlineFormInputName2" placeholder="score-2">
 						<button type="button" class="buton btn btn-secondary btn-sm">valider</button>
 				</div>
-				
+
 			</div>
-			
+
 		</div>
 	</div>
 </div>
