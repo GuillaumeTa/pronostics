@@ -90,15 +90,10 @@
                     <a href="http://localhost/pronostics/public/pronostics" class="btn btn-primary btn-lg btn-block" role="button">Pronostics</a>
                 </div>
                 <div class="accueil col-sm-12">
-                    <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/resultat" role="button">Résultats</a>
-                </div>
-                <div class="accueil col-sm-12">
-                    <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/classement" role="button">Classements</a>
-
                     <a href="http://localhost/pronostics/public/resultat" class="btn btn-primary btn-lg btn-block" role="button">Résultats</a>
                 </div>
                 <div class="accueil col-sm-12">
-                    <a href="http://localhost/pronostics/public/classement" class="btn btn-primary btn-lg btn-block" role="button">Classements</>
+                    <a href="http://localhost/pronostics/public/classement" class="btn btn-primary btn-lg btn-block" role="button">Classements</a>
                 </div>
             </div>
         </div>
