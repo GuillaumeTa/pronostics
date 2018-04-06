@@ -152,7 +152,5 @@
 
 <!-- Saut d'une ligne a la fin -->
 <br>
-
-
-
 @endsection
+

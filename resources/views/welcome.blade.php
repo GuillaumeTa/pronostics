@@ -7,6 +7,8 @@
 
         <title>GS Prono</title>
 
+
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -61,20 +63,21 @@
             }
 
             .accueil {
-                margin-bottom: 125px;
-                margin-top: 125px;
+                margin-bottom: 75px;
+                margin-top: 75px;
             }
         </style>
 
         <!--Bootstrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -84,13 +87,18 @@
 
             <div class="content">
                 <div class="accueil col-sm-12">
-                    <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/pronostics" role="button">Pronostics</a>
+                    <a href="http://localhost/pronostics/public/pronostics" class="btn btn-primary btn-lg btn-block" role="button">Pronostics</a>
                 </div>
                 <div class="accueil col-sm-12">
                     <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/resultat" role="button">Résultats</a>
                 </div>
                 <div class="accueil col-sm-12">
                     <a class="btn btn-secondary btn-lg" href="http://localhost/pronostics/public/classement" role="button">Classements</a>
+
+                    <a href="http://localhost/pronostics/public/resultat" class="btn btn-primary btn-lg btn-block" role="button">Résultats</a>
+                </div>
+                <div class="accueil col-sm-12">
+                    <a href="http://localhost/pronostics/public/classement" class="btn btn-primary btn-lg btn-block" role="button">Classements</>
                 </div>
             </div>
         </div>

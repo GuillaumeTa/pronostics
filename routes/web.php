@@ -18,9 +18,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/pronostics', 'PronosticsController@index')->name('pronostics');
-
 Route::get('/resultat', 'ResultatController@index')->name('resultat');
-
 Route::get('/classement', 'ClassementController@index')->name('classement');
-
 
