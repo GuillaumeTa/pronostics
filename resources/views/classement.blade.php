@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('CSSclassement')
+@section('CSSpages')
     <link rel="stylesheet" href="css/classement.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 @endsection
@@ -9,8 +9,8 @@
     <div class="container">
         <div class="row">
             <div class="vide col-md-2"></div>
-            <div class="nom col-md-6">{{ Auth::user()->name }}</div>
-            <div class="score col-md-2">{{ Auth::user()->score }}</div>
+            <div class="nom col-md-6">lool</div>
+            <div class="score col-md-2">ptdr</div>
             <div class="vide col-md-2"></div>
         </div>
         <div class="espace col-md-12"></div>
