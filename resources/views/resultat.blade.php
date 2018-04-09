@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
+				<p>Score Match</p>
 			</div>
 			<div class="equipeVotes col-md-2">
 				<p>equipe 1</p>
@@ -78,7 +78,7 @@
 			</div>
 
 			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
+				<p>Score Match</p>
 			</div>
 			<div class="equipeVotes col-md-2">
 				<p>equipe 1</p>
@@ -124,7 +124,7 @@
 			</div>
 
 			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
+				<p>Score Match</p>
 			</div>
 			<div class="equipeVotes col-md-2">
 				<p>equipe 1</p>
