@@ -1,158 +1,89 @@
-@extends('layouts.app') @section('CSSpages')
-<link href='css/pronostics.css' rel='stylesheet'>
-@endsection @section('content')
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- MATCH 1 -->
-<div class="container">
-	<div class="Match">
-		<div class="row">
-			<div class="col-md-2 col-xs-2"></div>
-			<div class="match col-md-8 col-xs-12">
-				<p>Match du "date" :</p>
-			</div>
-			<div class="col-md-2 col-xs-2"></div>
-		</div>
-		<div class="equipes row ">
-			<div class="equipe1 col-md-2 col-xs-16">
-				<p>
-					<br />Equipe 1<br />
-				</p>
-			</div>
-			<p class="versus">VS</p>
-			<div class="equipe2 col-md-2 col-xs-16">
-				<p>
-					<br />Equipe 2<br />
-				</p>
-			</div>
+    <title>GS Prono</title>
 
-			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 1</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 2</p>
-			</div>
-			<div class="scores">
-				<div class="score1 col-xs-2">
-					<label class="sr-only" for="inlineFormInputName2">Score1</label> <input
-						type="number" class="form-control mb-2 mr-sm-2"
-						id="inlineFormInputName2" placeholder="score-1">
-				</div>
-				<div class="score2 col-xs-2">
-					<label class="sr-only" for="inlineFormInputName2">Score2</label> <input
-						type="number" class="form-control mb-2 mr-sm-2"
-						id="inlineFormInputName2" placeholder="score-2">
-						<button type="button" class="buton btn btn-secondary btn-sm">valider</button>
-				</div>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-			</div>
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/72/13/9257b90dd201ba6.jpg");
+            background-color: #fff;
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .full-height {
+            height: 100vh;
+        }
 
-		</div>
-	</div>
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
 
-	<!-- MATCH 2 -->
+        .position-ref {
+            position: relative;
+        }
 
-	<div class="Match">
-		<div class="row">
-			<div class="col-md-2 col-xs-2"></div>
-			<div class="match col-md-8 col-xs-12">
-				<p>Match du "date" :</p>
-			</div>
-			<div class="col-md-2 col-xs-2"></div>
-		</div>
-		<div class="equipes row ">
-			<div class="equipe1 col-md-2 col-xs-16">
-				<p>
-					<br />Equipe 1<br />
-				</p>
-			</div>
-			<p class="versus">VS</p>
-			<div class="equipe2 col-md-2 col-xs-16">
-				<p>
-					<br />Equipe 2<br />
-				</p>
-			</div>
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
 
-			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 1</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 2</p>
-			</div>
-			<div class="scores">
-				<div class="score1 col-xs-2">
-					<label class="sr-only" for="inlineFormInputName2">Score1</label> <input
-						type="number" class="form-control mb-2 mr-sm-2"
-						id="inlineFormInputName2" placeholder="score-1">
-				</div>
-				<div class="score2 col-xs-2">
-					<label class="sr-only" for="inlineFormInputName2">Score2</label> <input
-						type="number" class="form-control mb-2 mr-sm-2"
-						id="inlineFormInputName2" placeholder="score-2">
-						<button type="button" class="buton btn btn-secondary btn-sm">valider</button>
-				</div>
-			</div>
+        .content {
+            text-align: center;
+        }
 
-		</div>
-	</div>
-	<!-- MATCH 3 -->
-	<div class="Match">
-		<div class="row">
-			<div class="col-md-2 col-xs-2"></div>
-			<div class="match col-md-8 col-xs-12">
-				<p>Match du "date" :</p>
-			</div>
-			<div class="col-md-2 col-xs-2"></div>
-		</div>
-		<div class="equipes row ">
-			<div class="equipe1 col-md-2 col-xs-16">
-				<p>
-					<br />Equipe 1<br />
-				</p>
-			</div>
-			<p class="versus">VS</p>
-			<div class="equipe2 col-md-2 col-xs-16">
-				<p>
-					<br />Equipe 2<br />
-				</p>
-			</div>
+        /*.title {
+            font-size: 84px;
+        }*/
 
-			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 1</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 2</p>
-			</div>
-			<div class="scores">
-				<div class="score1 col-xs-2">
-					<label class="sr-only" for="inlineFormInputName2">Score1</label> <input
-						type="number" class="form-control mb-2 mr-sm-2"
-						id="inlineFormInputName2" placeholder="score-1">
-				</div>
-				<div class="score2 col-xs-2">
-					<label class="sr-only" for="inlineFormInputName2">Score2</label> <input
-						type="number" class="form-control mb-2 mr-sm-2"
-						id="inlineFormInputName2" placeholder="score-2">
-						<button type="button" class="buton btn btn-secondary btn-sm">valider</button>
-				</div>
+        .links > a {
+            color: #ffffff;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-			</div>
+        .accueil {
+            margin-bottom: 125px;
+            margin-top: 125px;
+        }
+    </style>
 
-		</div>
-	</div>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="flex-center position-ref full-height">
+    @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+                <a href="{{ url('/home') }}">Home</a>
+            @else
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('register') }}">Register</a>
+            @endauth
+        </div>
+    @endif
+
+    <div class="content">
+    </div>
 </div>
-
-<!-- Saut d'une ligne a la fin -->
-<br>
-
-@endsection
-
+</body>
+</html>

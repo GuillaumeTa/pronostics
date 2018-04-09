@@ -1,58 +1,84 @@
-@charset "UTF-8";
-
-.match{
-	border: 1px solid black;
-	align-item: center;
-	
+.left {
+	float: left;
 }
-p{
+
+.right {
+	float: right;
+}
+
+#title1{
 	text-align: center;
 }
-.equipes{
-	margin-left: 15.8%;
-	margin-top: 1%;
-}
-.equipe1{
-	border: 1px solid black;
-}
-.versus{
-	margin-right: 78%;
-	margin-top: 1%;
-}
-.equipe2{
-	border: 1px solid black;
-	margin-left: 5%;
-	margin-top: -4.3%;
-}
-.scorePrev{
-	border: 1px solid black;
-	margin-left: 8.4%;
-	margin-top: -4.3%;
-}
-.equipeVotes{
-	margin-left: 5.5%;
-}
-.scores{
-	margin-right: -25%;
+
+#title2{
+	text-align: center;
 }
 
-.score1{
-	margin-left: 35%;
-
+.games-schedule .well {
+	background-color: #fafbfc;
+	border: 1px #e7e7e7 solid;
+	border-top: 2px #1761a6 solid;
+	border-radius: 0px;
+	padding: 0 10px 0 10px;
 }
-.score2{
-	margin-top: -2.9%;
-	margin-left: 50%;
-
+.games-schedule .col-md-2 {
+	padding: 5px;
 }
-.match{
-	margin-top: 5%;
+.games-schedule-title {
+	background-color: #1761a6;
+	color: #ffffff;
+	padding: 5px;
+	margin-bottom: 10px;
 }
-
-.buton{
-	margin-top: 3.8%;
-	margin-left: -22%
+.games-schedule-title h5 {
+	font-size: 18px;
+	text-align: center;
+	margin: 3px 0 3px 0;
 }
-
+.games-schedule-items {
+	padding: 5px;
+	margin-bottom: 15px;
+}
+.last-item {
+	margin-bottom: 0px;
+}
+.games-team {
+	margin-bottom: 12px;
+}
+.games-team h4 {
+	color: #59a1e8;
+	text-align: center;
+	margin-top: 20px;
+	border: 1px #c8d8e7 dotted;
+	padding: 5px;
+	width: 100%;
+}
+.games-team img {
+	border-bottom: 2px #6b9fd3 solid;
+	margin-bottom: 3px;
+}
+.games-team span {
+	color: #de6c10;
+	font-size: 13px;
+}
+.games-dash {
+	border: none;
+	border-top: 1px #95b3d0 dotted;
+}
+.games-info p {
+	margin: 0;
+	padding: 0;
+	color: #0a2948;
+	line-height: 20px;
+}
+.games-schedule-footer {
+	background-color: #1761a6;
+	color: #ffffff;
+	font-size: 10px;
+	padding: 5px;
+}
+.games-schedule-footer p {
+	margin: 0;
+}
 
 
