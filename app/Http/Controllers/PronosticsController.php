@@ -10,8 +10,4 @@ class PronosticsController extends Controller
     public function index(){
         return view('pronostics');
     }
-    
-    public function create(){
-
-    }
 }
