@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.match{
+    border: 1px solid black;
+    text-align: center;
+}
+
+.versus {
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+.form-control {
+    margin-top: 3%;
+}
+
+.result {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.equipeVotes {
+    text-align: center;
+}
+
+.button {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
