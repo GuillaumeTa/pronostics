@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ route('pronostics') }}">Pronostics</a></li>
+                        <li><a href="{{ route('pronostics.index') }}">Pronostics</a></li>
                         <li><a href="{{ route('resultat.index') }}">Résultats</a></li>
                         <li><a href="{{ route('classement') }}">Classement</a></li>
                     </ul>
