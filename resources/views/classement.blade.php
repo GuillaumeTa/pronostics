@@ -6,14 +6,36 @@
 @endsection
 
 @section('content')
-    @foreach($name_score as $score)
-    <div class="container">
-        <div class="row">
-            <div class="vide col-md-2"></div>
-            <div class="nom col-md-6"><?php echo $score->name?></div>
-            <div class="score col-md-2"><?php echo $score->score?></div>
-            <div class="vide col-md-2"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Classement</h3>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr class="filters">
+                            <th><span>Rang</span></th>
+                            <th><span>Nom</span></th>
+                            <th><span>Score</span></th>
+                        </tr>
+                        </thead>
+                        <?php $nombre_de_lignes=1; ?>
+                        @foreach($name_score as $score)
+                        <tbody>
+                        <tr>
+                            <td><?php echo $nombre_de_lignes;?></td>
+                            <td><?php echo $score->name?></td>
+                            <td><?php echo $score->score?></td>
+                        </tr>
+                        </tbody>
+                            <?php $nombre_de_lignes++?>
+                        @endforeach
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-    @endforeach
+
 @endsection
+
