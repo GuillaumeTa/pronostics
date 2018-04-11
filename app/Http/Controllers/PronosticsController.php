@@ -17,13 +17,6 @@ class PronosticsController extends Controller
         $pronos = Pronostics::get();
         return view('pronostics');
     }
-    
-<<<<<<< 57eafea78834a53b52481ab3a267cfed8461d040
-    public function create(){
-
-    }
-}
-=======
     /**
      * Show the form for creating a new resource.
      *
@@ -84,4 +77,4 @@ class PronosticsController extends Controller
         //
     }
 }
->>>>>>> back end prono
+
