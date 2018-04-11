@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/pronostics', 'PronosticsController@index')->name('pronostics');
+Route::resource('/pronostics', 'PronosticsController');
 Route::resource('/resultat', 'ResultatController');
 Route::get('/classement', 'ClassementController@index')->name('classement');
 
