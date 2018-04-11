@@ -37,22 +37,24 @@
 		</div>
 			<div class="row">
 				<div class="col-md-2"></div>
-				<div class="equipeVotes col-xs-12 col-sm-12 col-md-4">
-					<span>Equipe 1</span>
-				</div>
-				<div class="equipeVotes col-xs-12 col-sm-12 col-md-4">
-					<span>Equipe 2</span>
-				</div>
+
+
 				<div class="col-md-2"></div>
 			</div>
 				<div class="scores row">
 					<div class="col-md-2"></div>
 					<div class="score1 col-md-4">
+						<div class="equipeVotes">
+							<span>Equipe 1</span>
+						</div>
 						<label class="sr-only" for="inlineFormInputName2">Score1</label>
 						<input type="number" name="score_1" class="form-control mb-2 mr-sm-2"
 							id="inlineFormInputName2" placeholder="score_1">
 					</div>
 					<div class="score2 col-md-4">
+						<div class="equipeVotes">
+							<span>Equipe 2</span>
+						</div>
 						<label class="sr-only" for="inlineFormInputName2">Score2</label>
 						<input type="number" name="score_2" class="form-control mb-2 mr-sm-2"
 							id="inlineFormInputName2" placeholder="score_2">
