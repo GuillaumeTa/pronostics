@@ -14,8 +14,9 @@ class ResultatController extends Controller
      */
     public function index()
     {
-        $matchs = Match::get();
-        return view('resultat');
+        $rslt= match::orderBy('id', 'desc')
+        ->get();
+        return view('resultat', compact('rslt'));
     }
 
     /**
