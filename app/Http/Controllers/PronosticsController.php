@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pronostics;
+use App\match;
 
 class PronosticsController extends Controller
 {
@@ -15,7 +16,8 @@ class PronosticsController extends Controller
     public function index()
     {
         $pronos = Pronostics::get();
-        return view('pronostics');
+        $match = match::get();
+        return view('pronostics', compact('match'));
     }
     /**
      * Show the form for creating a new resource.
