@@ -25,9 +25,9 @@
                         @foreach($name_score as $score)
                         <tbody>
                         <tr>
-                            <td><?php echo $nombre_de_lignes;?></td>
-                            <td><?php echo $score->name?></td>
-                            <td><?php echo $score->score?></td>
+                            <td>{{ $nombre_de_lignes }}</td>
+                            <td>{{ $score->name }}</td>
+                            <td>{{ $score->score }}</td>
                         </tr>
                         </tbody>
                             <?php $nombre_de_lignes++?>

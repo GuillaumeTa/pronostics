@@ -6,75 +6,75 @@
 
 @section('content')
 
-	@admin
-<div class="Match container">
+@admin
+	<div class="Match container">
 		<form action="{{ route('resultat.store') }}" method="post">
 			{{ csrf_field() }}
-		<div class="row">
-			<div class="match col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-				<h3>Match du </h3>
+			<div class="title row">
+				<div class="match col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+					<h3>Match du :</h3>
+				</div>
+				<div class="date col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+					<input type="text" class="form-control" name="date" placeholder="00/00">
+				</div>
 			</div>
-			<div class="date col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
-				<input type="text" class="form-control" name="date" placeholder="00/00">
-			</div>
-		</div>
 
-		<div class="equipes row">
+			<div class="row">
 				<div class="equipe1 col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
 					<input type="text" class="form-control" name="equipe_1" placeholder="Equipe 1">
 				</div>
-				<div class="versus col-xs-12 col-sm-12 col-md-2">VS</div>
+				<div class="versus col-xs-12 col-sm-12 col-md-2"><h3>VS</h3></div>
 				<div class="equipe2 col-xs-12 col-sm-12 col-md-3">
 					<input type="text" class="form-control" name="equipe_2" placeholder="Equipe 2">
 				</div>
-		</div>
-		<div class="score row">
+			</div>
+			<div class="score row">
 				<div class="result col-xs-12 col-sm-12 col-md-2 col-md-offset-5">
 					<h4>Résultat du match</h4>
 				</div>
-		</div>
-				<div class="scores row">
-					<div class="score1 col-xs-12 col-sm-12 col-md-4 col-md-offset-2">
-						<div class="equipeVotes">
-							<span>Equipe 1</span>
-						</div>
-						<label class="sr-only" for="inlineFormInputName2">Score1</label>
-						<input type="number" name="score_1" class="form-control mb-2 mr-sm-2"
-							id="inlineFormInputName2" placeholder="score_1">
+			</div>
+			<div class="scores row">
+				<div class="score1 col-xs-12 col-sm-12 col-md-4 col-md-offset-2">
+					<div class="equipeVotes">
+						<h3>Equipe 1</h3>
 					</div>
-					<div class="score2 col-xs-12 col-sm-12 col-md-4">
-						<div class="equipeVotes">
-							<span>Equipe 2</span>
-						</div>
-						<label class="sr-only" for="inlineFormInputName2">Score2</label>
-						<input type="number" name="score_2" class="form-control mb-2 mr-sm-2"
-							id="inlineFormInputName2" placeholder="score_2">
-					</div>
+					<label class="sr-only" for="inlineFormInputName2">Score1</label>
+					<input type="number" name="score_1" class="form-control mb-2 mr-sm-2"
+						   id="inlineFormInputName2" placeholder="score final">
 				</div>
-			<div class="row">
-				<div class="button col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
-					<input type="submit" class="btn btn-primary btn-lg btn-block">
+				<div class="score2 col-xs-12 col-sm-12 col-md-4">
+					<div class="equipeVotes">
+						<h3>Equipe 2</h3>
+					</div>
+					<label class="sr-only" for="inlineFormInputName2">Score2</label>
+					<input type="number" name="score_2" class="form-control mb-2 mr-sm-2"
+							id="inlineFormInputName2" placeholder="score final">
 				</div>
 			</div>
+			<div class="row">
+					<div class="button col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+						<input type="submit" value="Envoyer" class="btn btn-primary btn-lg btn-block">
+					</div>
+			</div>
 		</form>
-</div>
-	@endadmin
-	@auth
-		@foreach($rslt as $resultat)
+	</div>
+@endadmin
+@auth
+	@foreach($rslt as $resultat)
 		<div class="Match container">
 				<div class="row">
 					<div class="match col-xs-12 col-sm-12 col-md-8 col-md-offset-2 ">
-						<h3>Match du <?php echo $resultat->date?> :</h3>
+						<h3>Match du {{ $resultat->date }} :</h3>
 					</div>
 				</div>
 
 				<div class="equipes row">
-					<div class="equipe1 col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
-						<p><?php echo $resultat->equipe_1?></p>
+					<div class="equipe1_2 col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
+						<p>{{ $resultat->equipe_1 }}</p>
 					</div>
-					<div class="versus col-xs-12 col-sm-12 col-md-2">VS</div>
-					<div class="equipe2 col-xs-12 col-sm-12 col-md-3">
-						<p><?php echo $resultat->equipe_2?></p>
+					<div class="versus col-xs-12 col-sm-12 col-md-2"><h3>VS</h3></div>
+					<div class="equipe1_2 col-xs-12 col-sm-12 col-md-3">
+						<p>{{ $resultat->equipe_2 }}</p>
 					</div>
 				</div>
 				<div class="score row">
@@ -83,18 +83,19 @@
 					</div>
 				</div>
 				<div class="scores row">
-					<div class="score1 col-xs-12 col-sm-12 col-md-4 col-md-offset-2">
-						<p><?php echo $resultat->score_1?></p>
+					<div class="score1_2 col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
+						<p>{{ $resultat->score_1 }}</p>
 					</div>
-					<div class="score2 col-xs-12 col-sm-12 col-md-4">
-						<p><?php echo $resultat->score_2?></p>
+					<div class="versus col-xs-12 col-sm-12 col-md-2"><h3>-</h3></div>
+					<div class="score1_2 col-xs-12 col-sm-12 col-md-3">
+						<p>{{ $resultat->score_2 }}</p>
 					</div>
 				</div>
 		</div>
-		@endforeach
-	@endauth
-	@guest
-		<p class="guest">Veuillez vous connecter pour consulter les résultats.</p>
+	@endforeach
+@endauth
+@guest
+	<p class="guest">Veuillez vous connecter pour consulter les résultats.</p>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
@@ -160,6 +161,6 @@
 				</div>
 			</div>
 		</div>
-	@endguest
+@endguest
 @endsection
 
