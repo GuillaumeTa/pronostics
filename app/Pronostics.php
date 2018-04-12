@@ -10,7 +10,7 @@ class Pronostics extends Model{
     
     public $table = 'pronostic';
     
-    public $fillable =[
+    protected $fillable =[
         'score_equipe_1', 'score_equipe_2', 'id_match', 'id_user'
     ];
 }

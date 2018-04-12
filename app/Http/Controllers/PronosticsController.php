@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,6 +7,7 @@ use App\match;
 
 class PronosticsController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -19,6 +19,7 @@ class PronosticsController extends Controller
         $match = match::get();
         return view('pronostics', compact('match'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -28,50 +29,51 @@ class PronosticsController extends Controller
     {
         return view('pronostics');
     }
-    
-    public function store(Request $request) {
+
+    public function store(Request $request)
+    {
         $prono = Pronostics::create($request->all());
-        return redirect(route('pronostics.index', $prono));
+        return view('succesVote', $prono);
     }
-    
+
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         //
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -79,4 +81,7 @@ class PronosticsController extends Controller
         //
     }
 }
+
+
+
 
