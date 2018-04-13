@@ -1,12 +1,27 @@
 @charset "UTF-8";
 
+body {
+    background-image: url("https://static.wixstatic.com/media/859125_b2c3afdae81f4098a4a61fe387e921fc~mv2.jpg");
+}
+
+.Match {
+    background-color: #999999;
+    margin-bottom: 5%;
+    border-radius: 8px;
+}
+
 .match {
     background-color: #2a88bd;
     border: 1px solid #2a88bd;
-    border-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     text-align: center;
     color : white;
     padding-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 3%;
 }
 
 .date {
@@ -18,7 +33,7 @@
 }
 
 .versus {
-    margin-top: 1.5%;
+    margin-top: 1%;
     text-align: center;
 }
 
@@ -51,4 +66,22 @@ h4 {
 
 p {
     text-align: center;
+}
+
+.equipes {
+    margin-top: 3%;
+}
+
+.scores {
+    margin-bottom: 3%;
+}
+
+.equipe1_2, .score1_2 {
+    margin-top: 2%;
+    background-color: white;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding-top: 1%;
+    color: #101010;
+    font-size: 15px;
 }
