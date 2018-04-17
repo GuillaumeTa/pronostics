@@ -42,7 +42,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('pronostics.index') }}">Pronostics</a></li>
                         <li><a href="{{ route('resultat.index') }}">Résultats</a></li>
-                        <li><a href="{{ route('classement') }}">Classement</a></li>
+                        <li><a href="{{ route('classement.index') }}">Classement</a></li>
                     </ul>
 					
                     <!-- Right Side Of Navbar -->

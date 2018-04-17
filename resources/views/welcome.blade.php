@@ -15,7 +15,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/72/13/9257b90dd201ba6.jpg");
+                background-image: url("https://static.wixstatic.com/media/859125_b2c3afdae81f4098a4a61fe387e921fc~mv2.jpg");
                 /*background-color: #fff;*/
                 color: #ffffff;
                 font-family: 'Raleway', sans-serif;
