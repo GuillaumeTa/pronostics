@@ -1,85 +1,99 @@
-@extends('layouts.app') @section('CSSpages')
+@extends('layouts.app')
+
+@section('CSSpages')
 <link href='css/pronostics.css' rel='stylesheet'>
-@endsection @section('content') @admin
+@endsection
+
+@section('content')
+
+@admin
 <p>bonjour admin</p>
+<div class="Match container">
+	<form action="{{ route('resultat.store') }}" method="post">
+		{{ csrf_field() }}
+		<div class="title row">
+			<div class="match col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+				<h3>Match du :</h3>
+			</div>
+			<div class="date col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+				<input type="text" class="form-control" name="date" placeholder="AAAA-MM-JJ">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="equipe1 col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
+				<input type="text" class="form-control" name="equipe_1" placeholder="Equipe 1">
+			</div>
+			<div class="versus col-xs-12 col-sm-12 col-md-2"><h3>VS</h3></div>
+			<div class="equipe2 col-xs-12 col-sm-12 col-md-3">
+				<input type="text" class="form-control" name="equipe_2" placeholder="Equipe 2">
+			</div>
+		</div>
+		<div class="row">
+			<div class="button col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+				<input type="submit" value="Envoyer" class="btn btn-primary btn-lg btn-block">
+			</div>
+		</div>
+	</form>
+</div>
 @endadmin 
 @auth
-<!-- MATCH 1 -->
-<div class="container">
-
-	<div class="Match">
-		@foreach($match as $matchs)
-		<div class="row">
-			<div class="col-md-2 col-xs-2"></div>
-			<div class="match col-md-8 col-xs-12">
-				<p>Match du {{$matchs->date}}</p>
+	@foreach($match as $matchs)
+	<div class="Match container">
+			<div class="title row">
+				<div class="match col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+					<h3>Match du :</h3>
+				</div>
+				<div class="date col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+				</div>
 			</div>
-			<div class="col-md-2 col-xs-2"></div>
-		</div>
-		<div class="equipes row ">
-			<div class="equipe1 col-md-2 col-xs-16">
-				<p>
-					<br />{{$matchs->equipe_1}}<br />
-				</p>
+			<div class="equipes row">
+				<div class="equipe1_2 col-xs-12 col-sm-12 col-md-3 col-md-offset-2">
+					<p>{{ $matchs->equipe_1 }}</p>
+				</div>
+				<div class="versus col-xs-12 col-sm-12 col-md-2"><h3>VS</h3></div>
+				<div class="equipe1_2 col-xs-12 col-sm-12 col-md-3">
+					<p>{{ $matchs->equipe_2 }}</p>
+				</div>
 			</div>
-			<p class="versus">VS</p>
-			<div class="equipe2 col-md-2 col-xs-16">
-				<p>
-					<br />{{$matchs->equipe_2}}<br />
-				</p>
+			<div class="score row">
+				<div class="result col-xs-12 col-sm-12 col-md-2 col-md-offset-5">
+					<h4>Choisissez le résultat</h4>
+				</div>
 			</div>
-
-			<div class="scorePrev col-md-4">
-				<p>Score prévisionel</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 1</p>
-			</div>
-			<div class="equipeVotes col-md-2">
-				<p>equipe 2</p>
-			</div>
-			<div class="scores">
-				
+			<div class="scores row">
 				<form action="{{ route('pronostics.store') }}" method="post">
 					{{ csrf_field() }}
-					<div class="score1 col-xs-2">
-						<label class="sr-only" for="inlineFormInputName2">Score1</label> <input
-							type="number" name="score_equipe_1"
-							class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
-							placeholder="score-1">
+					<div class="score1 col-xs-12 col-sm-12 col-md-4 col-md-offset-2">
+						<label class="sr-only" for="inlineFormInputName2">Score1</label>
+						<input type="number" name="score_equipe_1" class="form-control mb-2 mr-sm-2"
+							   id="inlineFormInputName2" placeholder="score equipe 1">
 					</div>
-					
-									<div class="score1 col-xs-2">
-						 <input
-							type="hidden" name="id_match" value='{{$matchs->id}}'
-							
-							></input>
+
+					<div class="col-xs-2">
+						<input type="hidden" name="id_match" value='{{$matchs->id}}'>
 					</div>
-					
-														<div class="score1 col-xs-2">
-						 <input
-							type="hidden" name="id_user" value='{{Auth::user()->id}}'
-							
-							></input>
+
+					<div class="col-xs-2">
+						<input type="hidden" name="id_user" value='{{Auth::user()->id}}'>
 					</div>
-					
-					
-					<div class="score2 col-xs-2">
-						<label class="sr-only" for="inlineFormInputName2">Score2</label> <input
-							type="number" name="score_equipe_2"
-							class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
-							placeholder="score-2"> <input type="submit"
-							class="buton btn btn-secondary btn-sm"></input>
+
+					<div class="score2 col-xs-12 col-sm-12 col-md-4">
+						<label class="sr-only" for="inlineFormInputName2">Score2</label>
+						<input type="number" name="score_equipe_2" class="form-control mb-2 mr-sm-2"
+							   id="inlineFormInputName2" placeholder="score equipe 2">
+					</div>
+					<div class="row">
+						<div class="button col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+							<input type="submit" value="Envoyer" class="btn btn-primary btn-lg btn-block">
+						</div>
 					</div>
 				</form>
 			</div>
-
-
 		</div>
-	</div>
 	@endforeach
-</div>
-@endauth  @guest
+@endauth
+@guest
         <p class="guest">Veuillez vous connecter pour consulter les résultats.</p>
         <div class="container">
             <div class="row">

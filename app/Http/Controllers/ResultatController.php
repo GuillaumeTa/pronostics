@@ -7,11 +7,6 @@ use App\match;
 
 class ResultatController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $rslt= match::orderBy('id', 'desc')
@@ -19,11 +14,6 @@ class ResultatController extends Controller
         return view('resultat', compact('rslt'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('resultat');
@@ -34,46 +24,26 @@ class ResultatController extends Controller
         return redirect(route('resultat.index', $match));
     }
 
-/**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $match = Match::findOrFail($id);
+
+        return view('resultat_edit', compact('match'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $match = Match::findOrFail($id);
+
+        $match->update($request->all());
+        return redirect(route('resultat.index', $id));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

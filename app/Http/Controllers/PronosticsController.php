@@ -11,7 +11,8 @@ class PronosticsController extends Controller
     public function index()
     {
         $pronos = Pronostics::get();
-        $match = match::get();
+        $match = match::orderBy('id', 'desc')
+        ->get();
         return view('pronostics', compact('match', 'pronos'));
     }
 
