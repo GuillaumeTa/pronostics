@@ -18,4 +18,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/pronostics', 'PronosticsController');
 Route::resource('/resultat', 'ResultatController');
-Route::get('/classement', 'ClassementController@index')->name('classement');
+Route::resource('/classement', 'ClassementController');
