@@ -27,7 +27,7 @@
                                 <tbody>
                                 <tr>
                                     <td>{{$name_score->name}}</td>
-                                    <td><input type="text" class="width_inp form-control" name="score" placeholder="Score" value={{$name_score->score}}></td>
+                                    <td><input type="number" class="width_inp form-control" name="score" placeholder="Score" value={{$name_score->score}}></td>
                                     <td><input type="submit" value="Envoyer" class="btn btn-primary btn-sm"></td>
                                 </tr>
                                 </tbody>
