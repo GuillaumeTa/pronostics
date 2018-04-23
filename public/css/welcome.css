@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://static.wixstatic.com/media/859125_b2c3afdae81f4098a4a61fe387e921fc~mv2.jpg");
+    color: #090909;
+}
+
+.title {
+    margin-top: 3%;
+}
+
+.content {
+    text-align: center;
+}
+
+.accueil {
+    margin-bottom: 75px;
+    margin-top: 75px;
+}
