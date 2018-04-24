@@ -15,3 +15,16 @@ body {
     margin-bottom: 75px;
     margin-top: 75px;
 }
+
+.logo {
+    position: relative;
+
+    animation-name: balloon;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes balloon {
+    0%   {left:0px; top:0px;}
+    100% {left:2000px; top:0px;}
+}
