@@ -11,6 +11,10 @@ th {
     text-align: center;
 }
 
+td {
+    text-align: center;
+}
+
 .filterable {
     margin-top: 15px;
 }
