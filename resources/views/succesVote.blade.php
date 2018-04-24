@@ -5,6 +5,6 @@
 
 @section('content')
 
-<p>Votre pronostic a bien été pris en compte</p>
+<h3>Votre pronostic a bien été pris en compte !</h3>
 
 @endsection

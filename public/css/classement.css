@@ -1,7 +1,10 @@
 body {
     background-image: url("https://static.wixstatic.com/media/859125_b2c3afdae81f4098a4a61fe387e921fc~mv2.jpg");
-    text-align: center;
     color: #090909;
+}
+
+h3 {
+    text-align: center;
 }
 
 th {
