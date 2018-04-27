@@ -42,9 +42,7 @@
 	<div class="Match container">
 			<div class="title row">
 				<div class="match col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-					<h3>Match du :</h3>
-				</div>
-				<div class="date col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+					<h3>Match du {{ $matchs->date }} :</h3>
 				</div>
 			</div>
 			<div class="equipes row">
